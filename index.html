@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WHOOP UCI - Static Prototype</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/Logo.png" alt="WHOOP UCI logo" />
+      </a>
+      <nav class="nav-desktop">
+        <a href="ktx.html">Transportation</a>
+        <a href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">Accommodation</a>
+      </nav>
+      <button id="menuToggle" class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
+      <a href="ktx.html">Transportation</a>
+      <a href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">Accommodation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-slides" aria-hidden="false">
+        <img class="slide visible" src="images/main-pic01.jpg" alt="Mountain biking hero 1" data-index="0">
+        <img class="slide" src="images/main-pic02.png" alt="Mountain biking hero 2" data-index="1">
+      </div>
+      <div class="hero-center">
+        <div class="hero-overlay">
+          <div class="container hero-content">
+            <h1 class="hero-title">WHOOP UCI<br><span>Mountain Bike World Series</span></h1>
+            <p class="hero-sub">YONGPYONG, KOREA 2026.05.01-03</p>
+          </div>
+        </div>
+
+        <div id="cards" class="container cards">
+          <div class="card-grid">
+          <a class="card" href="ktx.html">
+            <div class="card-visual">
+              <img src="images/transport.png" alt="transport icon">
+            </div>
+            <div class="card-body">
+              <h3>Transportation</h3>
+              <p>Please check the transport options for travelling to your accommodation and the event venue.</p>
+            </div>
+            <div class="card-footer">
+              <span class="btn">Detail <img class="btn-icon" src="images/seemore.png" alt="see more"></span>
+            </div>
+          </a>
+
+          <a class="card" href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">
+            <div class="card-visual">
+              <img src="images/accommodation.png" alt="accommodation icon">
+            </div>
+            <div class="card-body">
+              <h3>Accommodation</h3>
+              <p>Please select and book your preferred accommodation from the various options available.</p>
+            </div>
+            <div class="card-footer">
+              <span class="btn">Proceed to booking <img class="btn-icon" src="images/reservation.png" alt="reservation"></span>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two wide panels that sit below the hero/cards -->
+    <section class="info-panels">
+      <a class="panel panel-left" id="how-to-get" href="https://www.gangwon.to/en">
+        <div class="panel-inner">
+          <h3>How to Get to Gangwon</h3>
+          <span class="panel-cta">SEE MORE</span>
+        </div>
+      </a>
+      <a class="panel panel-right" id="whoop-site" href="https://www.ucimtbworldseries.com/" target="_blank" rel="noopener">
+        <div class="panel-inner">
+          <h3>WHOOP UCI MTB<br>World Series Offical Site</h3>
+          <span class="panel-cta">GO TO THE OFFICIAL WEBSITE</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Contact strip below the panels -->
+    <section class="contact-strip">
+      <div class="container contact-inner">
+        <div class="contact-item">
+          <img class="contact-icon" src="images/mail.png" alt="email icon">
+          <div>
+            <div class="contact-title">Have any questions? Contact us by email</div>
+            <div class="contact-meta">uci_korea@smartix.co.kr</div>
+          </div>
+        </div>
+        <div class="contact-item business-hours">
+          <img class="contact-icon" src="images/time.png" alt="business hours icon">
+          <div>
+            <div class="contact-title">Business hours: Mon-Fri 9:00-18:00(KST)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Copyright © GroundK. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
