@@ -8,30 +8,8 @@
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">
-        <img src="images/Logo.png" alt="WHOOP UCI logo" />
-      </a>
-      <nav class="nav-desktop">
-        <a href="ktx.html" class="active">Transportation</a>
-        <a href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">Accommodation</a>
-      </nav>
-      <button id="menuToggle" class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
-    </div>
-
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
-      <a href="ktx.html" class="active">Transportation</a>
-      <a href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">Accommodation</a>
-    </div>
-  </header>
+<body class="page-ktx">
+  <div id="header-placeholder"></div>
 
   <main>
     <section class="transport-hero">
@@ -44,7 +22,7 @@
     <section class="transport-content">
       <div class="container">
         <div class="transport-card">
-          <h2 class="transport-card-title" style="color: #0078C7;">Private Move</h2>
+          <h2 class="transport-card-title private-move-title">Private Move</h2>
           <p class="transport-card-subtitle">Premium chauffeur service using vans or large SUVs. Travel comfortably from the airport or your desired location directly to Monapyong.</p>
           <div class="feature-box">
             <h3 class="feature-title">Features</h3>
@@ -54,7 +32,7 @@
             </ul>
           </div>
           <div class="text-center">
-            <a href="#" class="transport-button btn-private">Book Private Transfer</a>
+            <a href="https://link.triseup.com/groundk" target="_blank" rel="noopener" class="transport-button btn-private">Book Private Transfer</a>
           </div>
         </div>
 
@@ -76,7 +54,7 @@
             </ul>
           </div>
           <div class="text-center">
-            <a href="#" class="transport-button btn-ktx">KTX Booking Site</a>
+            <a href="https://www.korail.com/global/eng/main" target="_blank" rel="noopener" class="transport-button btn-ktx">KTX Booking Site</a>
           </div>
         </div>
 
@@ -90,12 +68,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>Copyright © GroundK. All rights reserved.</p>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

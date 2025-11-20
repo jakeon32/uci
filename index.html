@@ -9,35 +9,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">
-        <img src="images/Logo.png" alt="WHOOP UCI logo" />
-      </a>
-      <nav class="nav-desktop">
-        <a href="ktx.html">Transportation</a>
-        <a href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">Accommodation</a>
-      </nav>
-      <button id="menuToggle" class="hamburger" aria-expanded="false" aria-controls="mobileMenu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
-    </div>
-
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
-      <a href="ktx.html">Transportation</a>
-      <a href="https://2026uci.mice.link/booking/PXDKSPY" target="_blank" rel="noopener">Accommodation</a>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <section class="hero">
       <div class="hero-slides" aria-hidden="false">
         <img class="slide visible" src="images/main-pic01.jpg" alt="Mountain biking hero 1" data-index="0">
-        <img class="slide" src="images/main-pic02.png" alt="Mountain biking hero 2" data-index="1">
+        <img class="slide" src="images/main-pic02.jpg" alt="Mountain biking hero 2" data-index="1">
       </div>
       <div class="hero-center">
         <div class="hero-overlay">
@@ -102,7 +80,7 @@
           <img class="contact-icon" src="images/mail.png" alt="email icon">
           <div>
             <div class="contact-title">Have any questions? Contact us by email</div>
-            <div class="contact-meta">uci_korea@smartix.co.kr</div>
+            <div class="contact-meta"><a href="mailto:uci_korea@smartix.co.kr" style="color: inherit; text-decoration: none;">uci_korea@smartix.co.kr</a></div>
           </div>
         </div>
         <div class="contact-item business-hours">
@@ -115,12 +93,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>Copyright © GroundK. All rights reserved.</p>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
