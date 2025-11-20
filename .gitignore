@@ -13,3 +13,10 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Claude Code
+.claude/
+
+# Reference/temp files
+mobile.html
+images/404_은은한_배경_산악자전거_일러스트.png
