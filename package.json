@@ -1,0 +1,14 @@
+{
+  "name": "whoop-uci-static-site",
+  "version": "1.0.0",
+  "description": "WHOOP UCI Mountain Bike World Series 2026 Website",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js"
+  },
+  "keywords": ["whoop", "uci", "mountain-bike"],
+  "author": "GroundK",
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  }
+}

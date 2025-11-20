@@ -251,6 +251,7 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
 /* KTX Page Styles */
 .page-ktx main {
   background-image: url('images/ktx.jpg');
+  background-image: url('images/ktx.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -480,6 +481,7 @@ a.card, a.card:hover, a.card:visited {
 /* How to Get to Gangwon */
 #how-to-get::before {
   background-image: url('images/HowtoGet.jpg');
+  background-image: url('images/HowtoGet.webp');
 }
 #how-to-get::after {
   background-color: rgba(254, 0, 86, 0.95); /* Original pink overlay */
@@ -494,6 +496,7 @@ a.card, a.card:hover, a.card:visited {
 /* WHOOP Site */
 #whoop-site::before {
   background-image: url('images/Whoop.png');
+  background-image: url('images/Whoop.webp');
 }
 #whoop-site::after {
   background-color: rgba(31, 31, 31, 0.95); /* Original dark overlay */
