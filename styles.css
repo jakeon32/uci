@@ -13,8 +13,8 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
 
 /* Header */
 .site-header{position:relative;background:#fff;color:#171717;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);z-index:80;} 
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px;position:relative}
-.logo img{height:auto;width:273px;display:block;max-width:100%}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px;position:relative;gap:32px}
+.logo img{height:auto;width:273px;display:block;max-width:100%;min-width:180px}
 .nav-desktop{display:flex;gap:120px;justify-content:center;align-items:center;flex:1 1 0}
 .nav-desktop a {
     color: #171717;
@@ -277,8 +277,24 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
   .nav-desktop{display:flex}
   .mobile-menu{display:none}
   .card-grid{grid-template-columns:repeat(2,1fr)}
-  .hamburger{display:none}
 }
+
+/* Tablet size: reduce spacing and font sizes */
+@media(min-width:768px) and (max-width:1023px){
+  .logo img{width:220px}
+  .nav-desktop{gap:60px}
+  .nav-desktop a{font-size:18px}
+  .header-inner{gap:24px}
+}
+
+/* Desktop size: full sizes */
+@media(min-width:1024px){
+  .logo img{width:273px}
+  .nav-desktop{gap:120px}
+  .nav-desktop a{font-size:20px}
+  .header-inner{gap:32px}
+}
+
 @media(max-width:767px){
   .nav-desktop{display:none}
   .hamburger{display:block}
