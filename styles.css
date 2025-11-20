@@ -7,7 +7,7 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;color:#111;background:#fff; overflow-x: hidden; width: 100%;}
+body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;color:#111;background:#fff; overflow-x: hidden; width: 100%; word-break: keep-all; overflow-wrap: break-word;}
 .container{max-width:var(--container-w);margin:0 auto;padding:20px 16px}
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 
@@ -50,7 +50,7 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
 .hamburger{display:none;background:transparent;border:0;color:#171717;padding:6px;cursor:pointer}
 .hamburger .bar{display:block;width:22px;height:2px;background:#171717;margin:4px 0}
 
-.mobile-menu{display:none;position:fixed;top:0;right:0;width:280px;height:100%;background:#111;color:#fff;padding:24px;z-index:1000;transform:translateX(100%);transition:transform .28s ease}
+.mobile-menu{display:none;position:fixed;top:0;right:0;width:280px;height:100%;background:#111;color:#fff;padding:80px 24px 24px 24px;z-index:1000;transform:translateX(100%);transition:transform .28s ease}
 .mobile-menu.open{transform:translateX(0)}
 .mobile-menu a {
     display: block;
@@ -58,9 +58,11 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
     margin: 16px 0;
     text-decoration: none;
     position: relative;
-    padding-bottom: 5px; /* Space for underline */
+    padding-bottom: 5px;
     transition: color 0.3s ease;
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 43.2px;
 }
 
 .mobile-menu a::after {
@@ -84,7 +86,38 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
     left: 0;
     transform: translateX(0);
 }
-.close-btn{background:transparent;border:0;color:#fff;font-size:20px;position:absolute;top:10px;right:12px}
+.close-btn {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.close-btn::before {
+  transform: rotate(45deg);
+}
+
+.close-btn::after {
+  transform: rotate(-45deg);
+}
 
 /* Hero */
 .hero{position:relative;height:auto;min-height:520px;overflow:hidden;z-index:10; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 32px;}
@@ -206,7 +239,8 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
   }
 
   /* Contact strip: stack items vertically on small screens */
-  .contact-inner{flex-direction:column;gap:24px;align-items:stretch;padding:0 12px}
+  .contact-inner{flex-direction:column;gap:24px;align-items:stretch;padding:0 20px}
+  .contact-strip { padding: 40px 0; }
   .contact-item{width:100%;justify-content:flex-start}
   .contact-meta{padding-left: 0;}
 
@@ -217,13 +251,25 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
   .card p { font-size: 16px; }
   .panel-left h3, .panel-right h3 { font-size: 32px; }
   .panel-cta { font-size: 18px; }
-  .contact-title { font-size: 18px; }
+  .contact-title { font-size: 18px; margin-bottom: 4px; }
   .contact-meta { font-size: 14px; }
   .site-footer { font-size: 14px; }
+
+  /* 404 Page Responsive */
+  .not-found-content h1 {
+    font-size: 90px;
+  }
+  .not-found-content h2 {
+    font-size: 28px;
+  }
+  .not-found-content p {
+    font-size: 16px;
+  }
 }
 
 /* Footer */
-.site-footer{background:#343537;color:#e6e2da;padding:20px 0;text-align:center; font-size: 18px;}
+.site-footer{background:#343537;color:#e6e2da;padding:10px 0;text-align:center; font-size: 18px;}
+.site-footer p { margin: 0; }
 
 /* Responsive */
 @media(min-width:768px){
@@ -243,7 +289,7 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
   .hero-title { font-size: 36px; }
   .contact-title,
   .contact-meta {
-    word-break: break-all;
+    overflow-wrap: break-word;
   }
 }
 
@@ -394,7 +440,7 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
   /* 폰트 사이즈 줄임 */
   .transport-title {
     font-size: 32px; /* 52px -> 32px (줄바꿈 방지) */
-    word-break: break-word; /* 긴 단어 강제 줄바꿈 허용 */
+    overflow-wrap: break-word; /* 긴 단어만 줄바꿈 */
   }
   .transport-subtitle {
     font-size: 18px;
@@ -420,6 +466,14 @@ body{margin:0;font-family:"Pretendard", -apple-system, BlinkMacSystemFont, syste
   }
   .site-footer {
     font-size: 14px;
+  }
+
+  /* 404 Page Responsive */
+  .not-found-content h1 {
+    font-size: 60px;
+  }
+  .not-found-content h2 {
+    font-size: 22px;
   }
 }
 
@@ -510,4 +564,68 @@ a.card, a.card:hover, a.card:visited {
 
 .private-move-title {
   color: #0078C7;
+}
+
+/* 404 Page Styles */
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 160px); /* Full height minus header/footer */
+  position: relative;
+  background-image: url('images/404pic.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.not-found-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.not-found-content {
+  position: relative;
+  z-index: 2;
+}
+
+.not-found-content h1 {
+  font-size: 120px;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+  line-height: 1;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.not-found-content h2 {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.not-found-content p {
+  font-size: 18px;
+  color: #e9ecef;
+  max-width: 450px;
+  margin: 0 auto 30px;
+}
+
+.btn-home {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  background-color: #d8004a;
 }

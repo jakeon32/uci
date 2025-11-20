@@ -54,6 +54,12 @@
     if(closeMenu){
       closeMenu.addEventListener('click', hideMenu);
     }
+
+    // Close menu when any menu link is clicked
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', hideMenu);
+    });
   }
 
   // Initialize slideshow immediately (doesn't depend on components)
